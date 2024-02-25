@@ -128,10 +128,7 @@ const Navbar = () => {
         </button>
       </nav>
 
-      <div
-        className={`nav__product__dropdown ${navActive ? "active" : null}`}
-        onMouseLeave={() => setNavActive(false)}
-      >
+      <div className={`nav__product__dropdown ${navActive ? "active" : null}`}>
         <h2 className="nav__heading">Tasteful</h2>
         <div className="dropdown__content">
           <div className="dropdown__image--wrapper">
