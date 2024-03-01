@@ -480,6 +480,7 @@ main {
 .info-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   gap: 1rem;
 
   padding: 5rem 8rem 10rem;
@@ -525,14 +526,10 @@ main {
 /* LANDING - Meals Slider */
 
 .meals__slider {
-  position: absolute;
-  transform: translateY(-50px);
-
-  width: 100%;
-
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 
   padding: 5rem;
 
@@ -542,6 +539,8 @@ main {
   background-color: #ebe8d6;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
+
+  outline: 50px solid #ebe8d6;
 
   h1 {
     width: fit-content;
@@ -555,6 +554,132 @@ main {
   p {
     width: 40%;
     padding: 1rem 0;
+  }
+}
+
+.meals__slider__select {
+  display: flex;
+  gap: 2rem;
+
+  padding-bottom: 2rem;
+
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  p {
+    width: fit-content;
+  }
+}
+
+.meals__slider__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+
+  max-width: 100%;
+}
+
+/* LANDING - Meal component */
+
+.meal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 450px;
+
+  padding-bottom: 1rem;
+
+  background-color: white;
+  border-radius: 20px;
+
+  img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+
+.meal__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1rem;
+
+  p {
+    width: 100%;
+  }
+}
+
+.meal__nutrition {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  width: 100%;
+}
+
+.meal__nutrition__value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-size: 0.8rem;
+    color: #b69c7e;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+.meal__nutrition__value.middle {
+  border-left: 1px solid #b69c7e;
+  border-right: 1px solid #b69c7e;
+}
+
+/* LANDING - showcase */
+
+.showcase {
+  margin-top: 50px;
+  max-width: 100%;
+}
+
+.showcase__inner {
+  --showcase-gap: 1rem;
+
+  padding-block: 1rem;
+  display: flex;
+  gap: var(--showcase-gap);
+
+  width: fit-content;
+
+  img {
+    max-width: 250px;
+    object-fit: cover;
+
+    border-radius: 20px;
+    aspect-ratio: 5/4;
+  }
+}
+
+.showcase[data-animated="true"] {
+  overflow: hidden;
+}
+
+.showcase[data-animated="true"] .showcase__inner {
+  animation: scroll 100s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - (var(--showcase-gap) / 2)));
   }
 }
 
