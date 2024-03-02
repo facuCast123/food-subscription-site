@@ -1,23 +1,23 @@
-import { useEffect, useRef } from "react";
-
 import Meal from "../components/landing-page/Meal";
 
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
 const LandingPage = () => {
-  const showcaseInner = useRef(null);
+  const foodImages1 = [
+    "./images/foods/food-1.jpg",
+    "./images/foods/food-2.jpg",
+    "./images/foods/food-3.jpg",
+    "./images/foods/food-4.jpg",
+    "./images/foods/food-5.jpg",
+    "./images/foods/food-6.jpg",
+  ];
 
-  useEffect(() => {
-    const showcaseContent = Array.from(showcaseInner.current.children);
-
-    showcaseContent.forEach((item) => {
-      const duplicatedItem = item.cloneNode(true);
-      duplicatedItem.setAttribute("aria-hidden", true);
-      showcaseInner.current.appendChild(duplicatedItem);
-    });
-  }, []);
+  const foodImages2 = [
+    "./images/foods/food-7.jpg",
+    "./images/foods/food-8.jpg",
+    "./images/foods/food-9.jpg",
+    "./images/foods/food-10.jpg",
+    "./images/foods/food-11.jpg",
+    "./images/foods/food-12.jpg",
+  ];
 
   return (
     <main>
@@ -77,14 +77,39 @@ const LandingPage = () => {
         </div>
       </div>
 
+      <div className="showcase adjust" data-animated="true">
+        <div className="showcase__inner">
+          {foodImages1.map((i) => {
+            return <img src={i} key={i} />;
+          })}
+
+          {foodImages1.map((i) => {
+            return <img src={i} key={i} aria-hidden="true" />;
+          })}
+        </div>
+      </div>
+
+      <div className="showcase" data-animated="true" data-direction="right">
+        <div className="showcase__inner">
+          {foodImages2.map((i) => {
+            return <img src={i} key={i} />;
+          })}
+
+          {foodImages2.map((i) => {
+            return <img src={i} key={i} aria-hidden="true" />;
+          })}
+        </div>
+      </div>
+
       <div className="showcase" data-animated="true">
-        <div className="showcase__inner" ref={showcaseInner}>
-          <img src="./images/foods/food-1.jpg" />
-          <img src="./images/foods/food-2.jpg" />
-          <img src="./images/foods/food-3.jpg" />
-          <img src="./images/foods/food-4.jpg" />
-          <img src="./images/foods/food-5.jpg" />
-          <img src="./images/foods/food-6.jpg" />
+        <div className="showcase__inner">
+          {foodImages1.map((i) => {
+            return <img src={i} key={i} />;
+          })}
+
+          {foodImages1.map((i) => {
+            return <img src={i} key={i} aria-hidden="true" />;
+          })}
         </div>
       </div>
     </main>

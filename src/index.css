@@ -646,8 +646,11 @@ main {
 
 /* LANDING - showcase */
 
-.showcase {
+.adjust {
   margin-top: 50px;
+}
+
+.showcase {
   max-width: 100%;
 }
 
@@ -674,7 +677,15 @@ main {
 }
 
 .showcase[data-animated="true"] .showcase__inner {
-  animation: scroll 100s linear infinite;
+  animation: scroll 50s var(--_animation-direction, forwards) linear infinite;
+}
+
+.showcase[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.showcase[data-direction="left"] {
+  --_animation-direction: forwards;
 }
 
 @keyframes scroll {
