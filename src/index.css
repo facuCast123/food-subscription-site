@@ -1,3 +1,20 @@
+:root {
+  /* TANGERINE */
+  --_tangerine-branding: #ffc634;
+  --_tangerine-contrast: #fde12d;
+  --_tangerine-secondary: #917c78;
+  --_tangerine-terciary: #545e56;
+
+  --_tangerine-100: #fafaf5;
+  --_tangerine-200: #f7f6ec;
+  --_tangerine-300: #ebe8d6;
+  --_tangerine-400: #d7c7b4;
+  --_tangerine-500: #cfbaa0;
+  --_tangerine-600: #b69c7e;
+  --_tangerine-700: #aca399;
+  --_tangerine-800: #594338;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -85,7 +102,7 @@ picture {
 
   li:hover,
   li:focus {
-    color: #ffc634;
+    color: var(--_tangerine-branding);
   }
 }
 
@@ -115,8 +132,8 @@ picture {
 }
 
 .nav__button:hover {
-  color: #ffc634;
-  border: 1px solid #ffc634;
+  color: var(--_tangerine-branding);
+  border: 1px solid var(--_tangerine-branding);
 }
 
 .nav__menu {
@@ -646,8 +663,11 @@ main {
 
 /* LANDING - showcase */
 
-.adjust {
+.showcase__container {
   margin-top: 50px;
+  padding-block: 2rem 5rem;
+
+  background-color: #f7f6ec;
 }
 
 .showcase {
@@ -692,6 +712,147 @@ main {
   to {
     transform: translateX(calc(-50% - (var(--showcase-gap) / 2)));
   }
+}
+
+/* LANDING - Features */
+
+.features {
+  padding: 2rem 0 5rem;
+
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+
+  outline: 50px solid white;
+
+  h3 {
+    color: var(--_tangerine-800);
+    font-weight: 600;
+
+    margin-bottom: 50px;
+    padding-left: 3rem;
+  }
+}
+
+.feature__wrapper {
+  display: flex;
+  gap: 8rem;
+
+  max-width: 100%;
+
+  overflow-x: auto;
+}
+
+/* LANDING - Feature component */
+
+.feature__container {
+  display: flex;
+  gap: 2rem;
+
+  min-width: fit-content;
+
+  padding: 0 2rem 3rem;
+
+  color: var(--_tangerine-800);
+  line-height: 2rem;
+}
+
+.feature__image {
+  width: 700px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+}
+
+.feature__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-width: 300px;
+
+  h1 {
+    font-weight: 600;
+    line-height: 2rem;
+  }
+}
+
+.feature__icon {
+  font-size: 4rem;
+}
+
+.feature__text {
+  font-size: 0.9rem;
+}
+
+.feature__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: fit-content;
+
+  cursor: pointer;
+
+  a {
+    color: var(--_tangerine-800);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  svg {
+    font-size: 1.5rem;
+  }
+}
+
+/* LANDING - instructions */
+
+.instructions {
+  display: flex;
+  gap: 1rem;
+
+  margin-top: 50px;
+  padding: 6rem 12rem;
+
+  background-color: var(--_tangerine-contrast);
+}
+
+.instructions__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  max-width: 50%;
+
+  color: var(--_tangerine-800);
+
+  h4 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.instructions__step {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.3rem;
+}
+
+.instructions__heading {
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+}
+
+.instructions__text {
+  padding-right: 30%;
+}
+
+.instructions__image {
+  width: 50%;
 }
 
 /* MEAL PLAN */

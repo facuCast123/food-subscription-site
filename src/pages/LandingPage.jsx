@@ -1,4 +1,9 @@
+import { useEffect, useRef } from "react";
+
+import Feature from "../components/landing-page/Feature";
 import Meal from "../components/landing-page/Meal";
+
+import data from "../FeatureData";
 
 const LandingPage = () => {
   const foodImages1 = [
@@ -18,6 +23,28 @@ const LandingPage = () => {
     "./images/foods/food-11.jpg",
     "./images/foods/food-12.jpg",
   ];
+
+  const featureScroll = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = (e) => {
+      if (featureScroll.current) {
+        if (Math.abs(e.deltaY) > 0) {
+          e.preventDefault();
+          featureScroll.current.scrollLeft += e.deltaY;
+          console.log("scrolling");
+        }
+      }
+    };
+
+    featureScroll.current.addEventListener("wheel", handleScroll, {
+      passive: false,
+    });
+  }, []);
+
+  const featureMap = data.map((item) => {
+    return <Feature key={item.id} item={item} />;
+  });
 
   return (
     <main>
@@ -56,7 +83,7 @@ const LandingPage = () => {
       </div>
 
       <div className="meals__slider">
-        <h1>Healthy & Tasty</h1>
+        <h2>Healthy & Tasty</h2>
         <p>
           You can mix and match as you like depending on the occasion and mood.
           Over 40 original recipes.
@@ -77,41 +104,86 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="showcase adjust" data-animated="true">
-        <div className="showcase__inner">
-          {foodImages1.map((i) => {
-            return <img src={i} key={i} />;
-          })}
-
-          {foodImages1.map((i) => {
-            return <img src={i} key={i} aria-hidden="true" />;
-          })}
+      <section className="showcase__container">
+        <div className="showcase adjust" data-animated="true">
+          <div className="showcase__inner">
+            {foodImages1.map((i) => {
+              return <img src={i} key={i} />;
+            })}
+            {foodImages1.map((i) => {
+              return <img src={i} key={i} aria-hidden="true" />;
+            })}
+          </div>
         </div>
-      </div>
 
-      <div className="showcase" data-animated="true" data-direction="right">
-        <div className="showcase__inner">
-          {foodImages2.map((i) => {
-            return <img src={i} key={i} />;
-          })}
-
-          {foodImages2.map((i) => {
-            return <img src={i} key={i} aria-hidden="true" />;
-          })}
+        <div className="showcase" data-animated="true" data-direction="right">
+          <div className="showcase__inner">
+            {foodImages2.map((i) => {
+              return <img src={i} key={i} />;
+            })}
+            {foodImages2.map((i) => {
+              return <img src={i} key={i} aria-hidden="true" />;
+            })}
+          </div>
         </div>
-      </div>
 
-      <div className="showcase" data-animated="true">
-        <div className="showcase__inner">
-          {foodImages1.map((i) => {
-            return <img src={i} key={i} />;
-          })}
-
-          {foodImages1.map((i) => {
-            return <img src={i} key={i} aria-hidden="true" />;
-          })}
+        <div className="showcase" data-animated="true">
+          <div className="showcase__inner">
+            {foodImages1.map((i) => {
+              return <img src={i} key={i} />;
+            })}
+            {foodImages1.map((i) => {
+              return <img src={i} key={i} aria-hidden="true" />;
+            })}
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section className="features">
+        <h3>Features</h3>
+
+        <div className="feature__wrapper snaps-inline" ref={featureScroll}>
+          {featureMap}
+        </div>
+      </section>
+
+      <section className="instructions">
+        <div className="instructions__content">
+          <h4>How to use</h4>
+
+          <div className="instructions__step">
+            <span>01.</span>
+            <p className="instructions__heading">Create your box</p>
+            <p className="instructions__text">
+              Choose your products and order your own box!
+            </p>
+          </div>
+
+          <div className="instructions__step">
+            <span>02.</span>
+            <p className="instructions__heading">Deliver to Home</p>
+            <p className="instructions__text">
+              Deliver individual flash-frozen ingredients to your home
+            </p>
+          </div>
+
+          <div className="instructions__step">
+            <span>01.</span>
+            <p className="instructions__heading">Make in One-Step</p>
+            <p className="instructions__text">
+              Put it on your favorite plate and microwave it!
+              <br /> When heating in the microwave, be sure to use a
+              heat-resistant container.
+            </p>
+          </div>
+        </div>
+
+        <img
+          className="instructions__image"
+          src="./images/instruction-image.jpg"
+          alt="A plate of waffles"
+        />
+      </section>
     </main>
   );
 };
