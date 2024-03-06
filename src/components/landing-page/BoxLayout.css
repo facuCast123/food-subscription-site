@@ -1,0 +1,120 @@
+/* LANDING - Box component */
+
+.box__layout {
+  display: flex;
+  gap: 1rem;
+}
+
+.box {
+  position: relative;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  text-align: center;
+
+  border: 2px solid var(--_tangerine-400);
+  border-radius: 10px;
+}
+
+.box__size {
+  /* don't ask about sizings on this one */
+  position: absolute;
+  left: -1px;
+  top: -1px;
+
+  width: 101%;
+  padding-block: 0.5rem;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  z-index: 1;
+}
+
+.box__icon__wrapper {
+  position: relative;
+
+  width: 100%;
+
+  padding-top: 2rem;
+}
+
+.box__icon {
+  font-size: 10rem;
+  font-weight: 400;
+}
+
+.box__amount {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+
+.box__per-meal {
+  font-size: 1.125rem;
+  color: var(--_tangerine-600);
+}
+
+.box__offer {
+  padding: 0.5rem 2rem;
+}
+
+.box__pricing {
+  display: flex;
+  align-items: center;
+
+  width: fit-content;
+
+  font-size: 1.125rem;
+
+  span {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+
+/* Small size box */
+.box.small-size > .box__size {
+  color: white;
+  background-color: var(--_tangerine-secondary);
+}
+.box.small-size > .box__offer {
+  color: var(--_tangerine-secondary);
+  background-color: hsla(10, 10%, 52%, 10%);
+}
+
+/* Medium size box */
+.box.medium-size > .box__size {
+  color: white;
+  background-color: var(--_tangerine-branding);
+}
+.box.medium-size > .box__offer {
+  color: var(--_tangerine-800);
+  background-color: hsla(43, 100%, 60%, 50%);
+}
+
+/* Large size box */
+.box.large-size > .box__size {
+  color: var(--_tangerine-800);
+  background-color: var(--_tangerine-contrast);
+}
+.box.large-size > .box__offer {
+  color: var(--_tangerine-800);
+  background-color: hsla(52, 98%, 58%, 50%);
+}

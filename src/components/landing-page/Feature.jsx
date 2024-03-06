@@ -5,6 +5,8 @@ import {
   IoIosArrowRoundForward,
 } from "react-icons/io";
 
+import "./Feature.css";
+
 const Feature = (props) => {
   return (
     <div className="feature__container">

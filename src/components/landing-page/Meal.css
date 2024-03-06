@@ -1,0 +1,64 @@
+/* LANDING - Meal component */
+
+.meal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 450px;
+
+  padding-bottom: 1rem;
+
+  background-color: white;
+  border-radius: 20px;
+
+  img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+
+.meal__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1rem;
+
+  p {
+    width: 100%;
+  }
+}
+
+.meal__nutrition {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  width: 100%;
+}
+
+.meal__nutrition__value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-size: 0.8rem;
+    color: #b69c7e;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+.meal__nutrition__value.middle {
+  border-left: 1px solid #b69c7e;
+  border-right: 1px solid #b69c7e;
+}

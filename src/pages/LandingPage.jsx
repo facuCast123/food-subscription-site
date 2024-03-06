@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 
 import Feature from "../components/landing-page/Feature";
 import Meal from "../components/landing-page/Meal";
+import BoxLayout from "../components/landing-page/BoxLayout";
 
 import data from "../FeatureData";
 
@@ -54,7 +55,7 @@ const LandingPage = () => {
 
       <div className="vegetable--divider"></div>
 
-      <div className="info-box">
+      <section className="info-box">
         <div className="info-box__heading">
           <span>Tasteful meal!</span>
           <p>
@@ -80,7 +81,7 @@ const LandingPage = () => {
             a healthy diet.
           </p>
         </div>
-      </div>
+      </section>
 
       <div className="meals__slider">
         <h2>Healthy & Tasty</h2>
@@ -183,6 +184,42 @@ const LandingPage = () => {
           src="./images/instruction-image.jpg"
           alt="A plate of waffles"
         />
+      </section>
+
+      <section className="plans">
+        <div className="plan__heading">
+          <h1>Select your plan</h1>
+          <p>
+            It arrives regularly <br />
+            It&apos;s easy to keep up with.
+          </p>
+        </div>
+
+        <div className="plan__content">
+          <div className="box__wrapper">
+            <BoxLayout />
+          </div>
+
+          <div className="plan__faq">
+            <h4>FAQ</h4>
+
+            <div className="plan__faq__grid-container">
+              <div className="_faq__qna">
+                <div className="_faq__qna__question">
+                  <span>Q</span>
+                  <p>When will I recieve my first order?</p>
+                </div>
+                <p className="_faq__qna__answer">
+                  Although it depends on the date of your order and the area of
+                  delivery, your order will be delivered within 4 days at the
+                  earliest. From the second time onward, your order will be
+                  delivered at the delivery frequency you selected at the time
+                  of purchase.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

@@ -1,3 +1,5 @@
+import "./Meal.css";
+
 const Meal = () => {
   return (
     <div className="meal">
