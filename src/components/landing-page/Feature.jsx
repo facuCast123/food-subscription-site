@@ -35,14 +35,4 @@ const Feature = (props) => {
   );
 };
 
-// I have no idea if the following is correct but it seems to work as expected probably maybe.
-
-Feature.propTypes = {
-  item: Object,
-  url: String,
-  icon: String,
-  title: String,
-  text: String,
-};
-
 export default Feature;

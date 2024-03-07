@@ -1,4 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 import Feature from "../components/landing-page/Feature";
 import Meal from "../components/landing-page/Meal";
@@ -6,25 +9,10 @@ import BoxLayout from "../components/landing-page/BoxLayout";
 
 import FeatureData from "../FeatureData";
 import FAQData from "../FAQData";
+import NewsData from "../NewsData";
 
 const LandingPage = () => {
-  const foodImages1 = [
-    "./images/foods/food-1.jpg",
-    "./images/foods/food-2.jpg",
-    "./images/foods/food-3.jpg",
-    "./images/foods/food-4.jpg",
-    "./images/foods/food-5.jpg",
-    "./images/foods/food-6.jpg",
-  ];
-
-  const foodImages2 = [
-    "./images/foods/food-7.jpg",
-    "./images/foods/food-8.jpg",
-    "./images/foods/food-9.jpg",
-    "./images/foods/food-10.jpg",
-    "./images/foods/food-11.jpg",
-    "./images/foods/food-12.jpg",
-  ];
+  const [translate, setTranslate] = useState(0);
 
   const featureScroll = useRef(null);
 
@@ -47,6 +35,42 @@ const LandingPage = () => {
   const featureMap = FeatureData.map((item) => {
     return <Feature key={item.id} item={item} />;
   });
+
+  // News slider translate functions
+
+  const slideLeft = () => {
+    if (translate === 0) {
+      setTranslate(0);
+    } else {
+      setTranslate((prev) => prev + 300);
+    }
+  };
+
+  const slideRight = () => {
+    if (translate === -1800) {
+      setTranslate((prev) => prev);
+    } else {
+      setTranslate((prev) => prev - 300);
+    }
+  };
+
+  const foodImages1 = [
+    "./images/foods/food-1.jpg",
+    "./images/foods/food-2.jpg",
+    "./images/foods/food-3.jpg",
+    "./images/foods/food-4.jpg",
+    "./images/foods/food-5.jpg",
+    "./images/foods/food-6.jpg",
+  ];
+
+  const foodImages2 = [
+    "./images/foods/food-7.jpg",
+    "./images/foods/food-8.jpg",
+    "./images/foods/food-9.jpg",
+    "./images/foods/food-10.jpg",
+    "./images/foods/food-11.jpg",
+    "./images/foods/food-12.jpg",
+  ];
 
   return (
     <main>
@@ -144,7 +168,7 @@ const LandingPage = () => {
       <section className="features">
         <h3>Features</h3>
 
-        <div className="feature__wrapper snaps-inline" ref={featureScroll}>
+        <div className="feature__wrapper" ref={featureScroll}>
           {featureMap}
         </div>
       </section>
@@ -220,6 +244,58 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+
+      <section className="news">
+        <div className="news__heading">
+          <h1>NEWS</h1>
+
+          <div className="news__buttons">
+            <button
+              className={`btn-prev ${translate === 0 ? "inactive" : null}`}
+              onClick={slideLeft}
+            >
+              <BsArrowLeftCircle />
+            </button>
+            <button
+              className={`btn-prev ${translate === -1800 ? "inactive" : null}`}
+              onClick={slideRight}
+            >
+              <BsArrowRightCircle />
+            </button>
+          </div>
+        </div>
+
+        <div className="news__container">
+          <div className="news__slider">
+            {NewsData.map((news) => {
+              return (
+                <div
+                  className="news__element"
+                  style={{ transform: `translateX(${translate}px)` }}
+                >
+                  <img
+                    className="news__element__image"
+                    src={news.url}
+                    alt="News image"
+                  />
+                  <span className="news__element__date">{news.date}</span>
+                  <p className="news__element__title">{news.title}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <p className="news__link">
+          <a href="#">Read More</a> <IoIosArrowRoundForward />
+        </p>
+      </section>
+
+      <div className="get-started">
+        <h1>Love yourself, always.</h1>
+        <p>A life where you can continue to love yourself.</p>
+        <button className="get-started__button">Start today</button>
+      </div>
     </main>
   );
 };
