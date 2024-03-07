@@ -4,7 +4,8 @@ import Feature from "../components/landing-page/Feature";
 import Meal from "../components/landing-page/Meal";
 import BoxLayout from "../components/landing-page/BoxLayout";
 
-import data from "../FeatureData";
+import FeatureData from "../FeatureData";
+import FAQData from "../FAQData";
 
 const LandingPage = () => {
   const foodImages1 = [
@@ -43,7 +44,7 @@ const LandingPage = () => {
     });
   }, []);
 
-  const featureMap = data.map((item) => {
+  const featureMap = FeatureData.map((item) => {
     return <Feature key={item.id} item={item} />;
   });
 
@@ -201,22 +202,20 @@ const LandingPage = () => {
           </div>
 
           <div className="plan__faq">
-            <h4>FAQ</h4>
+            <h4 className="plan__faq__title">FAQ</h4>
 
             <div className="plan__faq__grid-container">
-              <div className="_faq__qna">
-                <div className="_faq__qna__question">
-                  <span>Q</span>
-                  <p>When will I recieve my first order?</p>
-                </div>
-                <p className="_faq__qna__answer">
-                  Although it depends on the date of your order and the area of
-                  delivery, your order will be delivered within 4 days at the
-                  earliest. From the second time onward, your order will be
-                  delivered at the delivery frequency you selected at the time
-                  of purchase.
-                </p>
-              </div>
+              {FAQData.map((element) => {
+                return (
+                  <div className="_faq__qna" key={element.id}>
+                    <div className="_faq__qna__question">
+                      <span>&#81;</span>
+                      <p>{element.question}</p>
+                    </div>
+                    <p className="_faq__qna__answer">{element.answer}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
