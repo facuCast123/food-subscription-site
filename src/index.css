@@ -31,6 +31,10 @@ html {
 
 body {
   min-height: 100vh;
+  max-width: 1700px;
+
+  margin: 0 auto;
+
   line-height: 1.5;
 
   overflow-x: hidden;
@@ -543,6 +547,8 @@ main {
 /* LANDING - Meals Slider */
 
 .meals__slider {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -558,20 +564,20 @@ main {
   border-top-right-radius: 60px;
 
   outline: 50px solid #ebe8d6;
+}
 
-  h1 {
-    width: fit-content;
+.meals__slider__title {
+  width: fit-content;
 
-    font-size: 4rem;
-    font-weight: 500;
+  font-size: 4rem;
+  font-weight: 500;
 
-    text-transform: uppercase;
-  }
+  text-transform: uppercase;
+}
 
-  p {
-    width: 40%;
-    padding: 1rem 0;
-  }
+.meals__slider__text {
+  width: 40%;
+  padding: 1rem 0;
 }
 
 .meals__slider__select {
@@ -589,11 +595,119 @@ main {
 }
 
 .meals__slider__wrapper {
+  position: relative;
+
   display: flex;
   flex-wrap: nowrap;
   gap: 1rem;
 
   max-width: 100%;
+}
+
+.meals__slider__button {
+  position: absolute;
+  top: 55%;
+
+  font-size: 3rem;
+  color: var(--_tangerine-800);
+
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  z-index: 2;
+}
+
+.meals__slider__button.left {
+  left: 20px;
+}
+
+.meals__slider__button.right {
+  right: 20px;
+}
+
+.button-prev,
+.button-next {
+  background-color: var(--_tangerine-300);
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  z-index: 1;
+}
+
+/* LANDING - Meal component */
+
+.meal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  min-width: 350px;
+  max-width: 350px;
+
+  padding-bottom: 1rem;
+
+  background-color: white;
+  border-radius: 20px;
+
+  transition: transform 0.3s linear;
+}
+
+.meal__image {
+  width: 100%;
+  height: 350px;
+
+  object-fit: cover;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.meal__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+.meal__description {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.meal__nutrition {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  width: 100%;
+}
+
+.meal__nutrition__value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-size: 0.8rem;
+    color: #b69c7e;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+.meal__nutrition__value.middle {
+  border-left: 1px solid #b69c7e;
+  border-right: 1px solid #b69c7e;
 }
 
 /* LANDING - showcase */
@@ -721,7 +835,11 @@ main {
 }
 
 .instructions__image {
-  width: 50%;
+  max-width: 50%;
+  max-height: 600px;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 /* LANDING - Plans Selection */
@@ -742,6 +860,8 @@ main {
   flex-direction: column;
   gap: 1rem;
 
+  min-width: 30%;
+
   h1 {
     font-size: 2.5rem;
     font-weight: 500;
@@ -752,6 +872,7 @@ main {
 .plan__content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 3rem;
 }
 

@@ -4,15 +4,77 @@ import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 import Feature from "../components/landing-page/Feature";
-import Meal from "../components/landing-page/Meal";
+// import Meal from "../components/landing-page/Meal";
 import BoxLayout from "../components/landing-page/BoxLayout";
 
+import MealData from "../MealData";
 import FeatureData from "../FeatureData";
 import FAQData from "../FAQData";
 import NewsData from "../NewsData";
 
 const LandingPage = () => {
+  const [mealSlider, setMealSlider] = useState(0);
   const [translate, setTranslate] = useState(0);
+
+  // Meal component mapping
+
+  const mealMap = MealData.map((meal) => {
+    return (
+      <div
+        className="meal"
+        style={{ transform: `translateX(${mealSlider}px)` }}
+      >
+        <img className="meal__image" src={meal.url} alt={meal.title} />
+
+        <div className="meal__info">
+          <h2 className="meal__title">{meal.title}</h2>
+          <p className="meal__description">{meal.description}</p>
+        </div>
+
+        <div className="meal__nutrition">
+          <div className="meal__nutrition__value">
+            <h3>Calories</h3>
+            <p>
+              <span className="">{meal.calories}</span> Kcal
+            </p>
+          </div>
+
+          <div className="meal__nutrition__value middle">
+            <h3>Protein</h3>
+            <p>
+              <span>{meal.protein}</span> g
+            </p>
+          </div>
+
+          <div className="meal__nutrition__value">
+            <h3>Vegetables</h3>
+            <p>
+              <span>{meal.vegetables}</span> kinds
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  });
+
+  const mealSlideLeft = () => {
+    if (mealSlider === 0) {
+      setMealSlider(0);
+    } else {
+      setMealSlider((prev) => prev + 300);
+    }
+  };
+
+  const mealSlideRight = () => {
+    if (mealSlider === mealMap.length * -200) {
+      setMealSlider((prev) => prev);
+    } else {
+      setMealSlider((prev) => prev - 300);
+    }
+    console.log(mealSlider);
+  };
+
+  // Feature slider scroll functions
 
   const featureScroll = useRef(null);
 
@@ -53,6 +115,8 @@ const LandingPage = () => {
       setTranslate((prev) => prev - 300);
     }
   };
+
+  // Showcase data
 
   const foodImages1 = [
     "./images/foods/food-1.jpg",
@@ -109,8 +173,8 @@ const LandingPage = () => {
       </section>
 
       <div className="meals__slider">
-        <h2>Healthy & Tasty</h2>
-        <p>
+        <h2 className="meals__slider__title">Healthy & Tasty</h2>
+        <p className="meals__slider__text">
           You can mix and match as you like depending on the occasion and mood.
           Over 40 original recipes.
         </p>
@@ -123,11 +187,25 @@ const LandingPage = () => {
           <p>Set Menu</p>
         </div>
 
-        <div className="meals__slider__wrapper">
-          <Meal />
-          <Meal />
-          <Meal />
-        </div>
+        <button
+          className={`meals__slider__button left ${
+            mealSlider === 0 ? "inactive" : null
+          }`}
+          onClick={mealSlideLeft}
+        >
+          <BsArrowLeftCircle className="button-prev" />
+        </button>
+
+        <button
+          className={`meals__slider__button right ${
+            mealSlider === 0 ? "inactive" : null
+          }`}
+          onClick={mealSlideRight}
+        >
+          <BsArrowRightCircle className="button-next" />
+        </button>
+
+        <div className="meals__slider__wrapper">{mealMap}</div>
       </div>
 
       <section className="showcase__container">
