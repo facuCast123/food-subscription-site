@@ -1,17 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 
+import { Link } from "react-router-dom";
+
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 import Feature from "../components/landing-page/Feature";
-// import Meal from "../components/landing-page/Meal";
 import BoxLayout from "../components/landing-page/BoxLayout";
 
-import MealData from "../MealData";
-import FeatureData from "../FeatureData";
-import FAQData from "../FAQData";
-import NewsData from "../NewsData";
-import { Link } from "react-router-dom";
+import MealData from "../Data/MealData";
+import FeatureData from "../Data/FeatureData";
+import FAQData from "../Data/FAQData";
+import NewsData from "../Data/NewsData";
 
 const LandingPage = () => {
   const [mealSlider, setMealSlider] = useState(0);
@@ -173,7 +173,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <div className="meals__slider">
+      <section className="meals__slider">
         <h2 className="meals__slider__title">Healthy & Tasty</h2>
         <p className="meals__slider__text">
           You can mix and match as you like depending on the occasion and mood.
@@ -207,7 +207,11 @@ const LandingPage = () => {
         </button>
 
         <div className="meals__slider__wrapper">{mealMap}</div>
-      </div>
+
+        <p className="meals__slider__link">
+          <a href="#">Read More</a> <IoIosArrowRoundForward />
+        </p>
+      </section>
 
       <section className="showcase__container">
         <div className="showcase adjust" data-animated="true">
