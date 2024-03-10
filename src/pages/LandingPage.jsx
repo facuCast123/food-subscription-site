@@ -11,6 +11,7 @@ import MealData from "../MealData";
 import FeatureData from "../FeatureData";
 import FAQData from "../FAQData";
 import NewsData from "../NewsData";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const [mealSlider, setMealSlider] = useState(0);
@@ -372,7 +373,9 @@ const LandingPage = () => {
       <div className="get-started">
         <h1>Love yourself, always.</h1>
         <p>A life where you can continue to love yourself.</p>
-        <button className="get-started__button">Start today</button>
+        <Link className="get-started__button" to="/meal-plan">
+          Start today
+        </Link>
       </div>
     </main>
   );

@@ -3,6 +3,8 @@
 .box__layout {
   display: flex;
   gap: 1rem;
+
+  color: var(--_tangerine-800);
 }
 
 .box {

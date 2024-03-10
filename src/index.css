@@ -106,7 +106,7 @@ picture {
 
   li:hover,
   li:focus {
-    color: var(--_tangerine-branding);
+    text-decoration: underline;
   }
 }
 
@@ -176,9 +176,11 @@ picture {
 
   padding: 2rem;
 
+  background-color: white;
+
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  background-color: white;
+  border-bottom: 1px solid gray;
 
   animation: slideDown 0.3s ease-out;
 }
@@ -1057,6 +1059,7 @@ main {
 
   font-size: 1.5rem;
   color: white;
+  text-decoration: none;
 
   background-color: var(--_tangerine-branding);
 
@@ -1072,13 +1075,13 @@ main {
 
 /* MEAL PLAN */
 
-.plans__heading {
+.meal-plan-page__heading {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 
-  padding: 5rem;
-  padding-bottom: 10rem;
+  padding: 7rem 5rem;
 
   color: white;
   background-color: #ffc634;
@@ -1093,6 +1096,65 @@ main {
 
     text-transform: uppercase;
   }
+}
+
+.meal-plan-page__select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: var(--_tangerine-200);
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  outline: 50px solid var(--_tangerine-200);
+}
+
+._select__button-wrapper {
+  display: flex;
+  gap: 1rem;
+
+  button {
+    display: flex;
+    align-items: center;
+
+    padding: 1rem 2.5rem;
+
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--_tangerine-800);
+
+    background-color: white;
+    border: 2px solid var(--_tangerine-400);
+    border-radius: 10px;
+
+    cursor: pointer;
+  }
+}
+
+.accent {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+._select__description {
+  padding-inline: 15rem;
+
+  text-align: center;
+  color: var(--_tangerine-600);
+}
+
+._select__menu {
+  padding: 1.125rem 6rem;
+
+  font-size: 1.5rem;
+  color: white;
+
+  background-color: var(--_tangerine-branding);
+  border: 1px solid transparent;
+  border-radius: 50px;
+
+  cursor: pointer;
 }
 
 /* FOOTER */
