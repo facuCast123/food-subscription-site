@@ -1150,6 +1150,10 @@ main {
 
     cursor: pointer;
   }
+
+  button:hover {
+    border: 2px solid black;
+  }
 }
 
 .accent {
