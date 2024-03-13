@@ -62,9 +62,9 @@ const Navbar = () => {
             className={`nav__menu__dropdown ${
               navActive ? null : menuActive ? "active" : null
             }`}
-            onMouseLeave={() => setMenuActive(false)}
           >
             <div className="menu__dropdown__image"></div>
+
             <div className="menu__dropdown__content">
               <h2>ALL PRODUCTS</h2>
 
@@ -130,6 +130,7 @@ const Navbar = () => {
 
       <div className={`nav__product__dropdown ${navActive ? "active" : null}`}>
         <h2 className="nav__heading">Tasteful</h2>
+
         <div className="dropdown__content">
           <div className="dropdown__image--wrapper">
             <div className="dropdown__image--container">

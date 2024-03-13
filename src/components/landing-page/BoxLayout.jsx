@@ -1,11 +1,22 @@
 import { BsBox2 } from "react-icons/bs";
 
 import "./BoxLayout.css";
+import { useState } from "react";
 
 const Box = () => {
+  const [boxSelect, setBoxSelect] = useState(null);
+
+  const handleBoxSelect = (box) => {
+    setBoxSelect(box);
+  };
+
   return (
     <div className="box__layout">
-      <div className="box small-size">
+      <div
+        className="box small-size"
+        style={boxSelect === "box1" ? { border: "2px solid black" } : {}}
+        onClick={() => handleBoxSelect("box1")}
+      >
         <span className="box__size">S box</span>
 
         <div className="box__icon__wrapper">
@@ -24,7 +35,11 @@ const Box = () => {
         </p>
       </div>
 
-      <div className="box medium-size">
+      <div
+        className="box medium-size"
+        style={boxSelect === "box2" ? { border: "2px solid black" } : {}}
+        onClick={() => handleBoxSelect("box2")}
+      >
         <span className="box__size">M box</span>
 
         <div className="box__icon__wrapper">
@@ -43,7 +58,11 @@ const Box = () => {
         </p>
       </div>
 
-      <div className="box large-size">
+      <div
+        className="box large-size"
+        style={boxSelect === "box3" ? { border: "2px solid black" } : {}}
+        onClick={() => handleBoxSelect("box3")}
+      >
         <span className="box__size">L box</span>
 
         <div className="box__icon__wrapper">

@@ -209,7 +209,7 @@ const LandingPage = () => {
         <div className="meals__slider__wrapper">{mealMap}</div>
 
         <p className="meals__slider__link">
-          <a href="#">Read More</a> <IoIosArrowRoundForward />
+          <a href="#">All Products</a> <IoIosArrowRoundForward />
         </p>
       </section>
 
