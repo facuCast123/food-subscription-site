@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   FaAngleDown,
   FaArrowRightToBracket,
@@ -10,6 +11,7 @@ import {
   FaTiktok,
   FaPinterestP,
 } from "react-icons/fa6";
+import ProductsListing from "../../pages/ProductsListing";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
@@ -25,9 +27,34 @@ const Navbar = () => {
       setMenuActive(!menuActive);
   };
 
+  // Change styling on different routes
+
+  const location = useLocation();
+  let navbarStyle;
+  let navbarHeading;
+
+  switch (location.pathname) {
+    case "/meal-plan":
+      navbarStyle = { display: "none" };
+      break;
+    case "/products":
+    case "/products/soups":
+      navbarStyle = { color: "black" };
+      navbarHeading = { display: "block" };
+      break;
+    default:
+      navbarStyle = {};
+  }
+
   return (
-    <div className={`nav__container ${navActive ? "active" : null}`}>
-      <nav className={`nav__navbar ${navActive ? "active" : null}`}>
+    <div
+      className={`nav__container ${navActive ? "active" : null}`}
+      style={navbarStyle}
+    >
+      <nav
+        className={`nav__navbar ${navActive ? "active" : null}`}
+        style={navbarStyle}
+      >
         <ul className="nav__content">
           <li
             className={navActive ? "active" : null}
@@ -54,6 +81,7 @@ const Navbar = () => {
         >
           <FaRegUser /> <span>Log In</span>
         </button>
+
         <button className="nav__menu" onClick={() => handleMenu()}>
           <FaBars
             className={`nav__menu__icon ${menuActive ? "active" : null}`}
@@ -129,7 +157,9 @@ const Navbar = () => {
       </nav>
 
       <div className={`nav__product__dropdown ${navActive ? "active" : null}`}>
-        <h2 className="nav__heading">Tasteful</h2>
+        <h2 className="nav__heading" style={navbarHeading}>
+          Tasteful
+        </h2>
 
         <div className="dropdown__content">
           <div className="dropdown__image--wrapper">
@@ -170,11 +200,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="dropdown__link">
+        <Link to={"products"} className="dropdown__link">
           <span>
             All Products <FaArrowRight />
           </span>
-        </div>
+        </Link>
       </div>
     </div>
   );

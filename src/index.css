@@ -249,8 +249,10 @@ picture {
   margin-top: 0.5rem;
   padding: 1.5rem 0 0;
 
+  color: var(--_tangerine-800);
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   opacity: 60%;
 
   border-top: 1px solid gray;
@@ -1119,7 +1121,7 @@ main {
   align-items: center;
   gap: 1rem;
 
-  padding: 7rem 5rem;
+  padding: 4rem 5rem 7rem;
 
   color: white;
   background-color: #ffc634;
@@ -1131,6 +1133,7 @@ main {
 
   h1 {
     font-size: 2rem;
+    font-weight: 500;
 
     text-transform: uppercase;
   }
@@ -1204,6 +1207,34 @@ main {
 ._select__menu.active {
   background-color: var(--_tangerine-branding);
   cursor: pointer;
+}
+
+/* PRODUCTS LISTING */
+
+.listing {
+  padding: 70px 0 1rem;
+}
+
+.listing__select {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+
+  border-top: 1px solid var(--_tangerine-600);
+  border-bottom: 1px solid var(--_tangerine-branding);
+
+  a {
+    padding: 2rem 0;
+
+    width: 100%;
+    text-align: center;
+
+    color: var(--_tangerine-800);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }
 
 /* FOOTER */
