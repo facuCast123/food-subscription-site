@@ -22,6 +22,7 @@ const LandingPage = () => {
   const mealMap = MealData.map((meal) => {
     return (
       <div
+        key={meal.id}
         className="meal"
         style={{ transform: `translateX(${mealSlider}px)` }}
       >
