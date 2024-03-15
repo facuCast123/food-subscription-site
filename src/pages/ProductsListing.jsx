@@ -24,7 +24,12 @@ const ProductsListing = () => {
           Soup
         </NavLink>
 
-        <NavLink>Salad</NavLink>
+        <NavLink
+          to="salads"
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          Salad
+        </NavLink>
         <NavLink>Smoothie</NavLink>
       </nav>
       <Outlet />

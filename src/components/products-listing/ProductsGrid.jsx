@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import "./ProductsGrid.css";
 
 import MealData from "../../Data/MealData";
+import ImageComponent from "./ImageComponent";
 
 const ProductGrid = () => {
   const location = useLocation();
@@ -12,7 +13,7 @@ const ProductGrid = () => {
         ? MealData.meals.map((meal) => {
             return (
               <div className="products-grid__product" key={meal.id}>
-                <img src={meal.url} alt={meal.title} loading="lazy" />
+                <ImageComponent src={meal.url} />
                 <p>{meal.title}</p>
               </div>
             );
@@ -21,8 +22,17 @@ const ProductGrid = () => {
         ? MealData.soups.map((soup) => {
             return (
               <div className="products-grid__product" key={soup.id}>
-                <img src={soup.url} alt={soup.title} loading="lazy" />
+                <ImageComponent src={soup.url} />
                 <p>{soup.title}</p>
+              </div>
+            );
+          })
+        : location.pathname === "/products/salads"
+        ? MealData.salads.map((salad) => {
+            return (
+              <div className="products-grid__product" key={salad.id}>
+                <ImageComponent src={salad.url} />
+                <p>{salad.title}</p>
               </div>
             );
           })

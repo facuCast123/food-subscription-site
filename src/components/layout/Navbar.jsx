@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+
 import {
   FaAngleDown,
   FaArrowRightToBracket,
@@ -11,7 +12,8 @@ import {
   FaTiktok,
   FaPinterestP,
 } from "react-icons/fa6";
-import ProductsListing from "../../pages/ProductsListing";
+
+import "./Navbar.css";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
@@ -31,7 +33,7 @@ const Navbar = () => {
 
   const location = useLocation();
   let navbarStyle;
-  let navbarHeading;
+  let navbarTitle;
 
   switch (location.pathname) {
     case "/meal-plan":
@@ -39,8 +41,8 @@ const Navbar = () => {
       break;
     case "/products":
     case "/products/soups":
+    case "/products/salads":
       navbarStyle = { color: "black" };
-      navbarHeading = { display: "block" };
       break;
     default:
       navbarStyle = {};
@@ -73,6 +75,8 @@ const Navbar = () => {
             </span>
           </li>
         </ul>
+
+        <h2 className="nav__title">Tasteful</h2>
 
         <button
           className={`nav__button ${navActive ? "active" : null} ${
@@ -139,7 +143,9 @@ const Navbar = () => {
               </div>
 
               <div className="menu__links">
-                <p>All products</p>
+                <Link to="products">
+                  <p>All products</p>
+                </Link>
                 <p>Promise</p>
                 <p>News</p>
                 <p>FAQ</p>
@@ -157,9 +163,7 @@ const Navbar = () => {
       </nav>
 
       <div className={`nav__product__dropdown ${navActive ? "active" : null}`}>
-        <h2 className="nav__heading" style={navbarHeading}>
-          Tasteful
-        </h2>
+        <h2 className="nav__heading">Tasteful</h2>
 
         <div className="dropdown__content">
           <div className="dropdown__image--wrapper">

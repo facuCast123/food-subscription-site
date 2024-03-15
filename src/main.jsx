@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="products" element={<ProductsListing />}>
             <Route index element={<ProductsGrid />} />
             <Route path="soups" element={<ProductsGrid />} />
-            <Route path="salad" element={<ProductsGrid />} />
+            <Route path="salads" element={<ProductsGrid />} />
           </Route>
         </Route>
       </Routes>
