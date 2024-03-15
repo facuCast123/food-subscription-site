@@ -19,7 +19,7 @@ const LandingPage = () => {
 
   // Meal component mapping
 
-  const mealMap = MealData.map((meal) => {
+  const mealMap = MealData.meals.map((meal) => {
     return (
       <div
         key={meal.id}
@@ -121,21 +121,21 @@ const LandingPage = () => {
   // Showcase data
 
   const foodImages1 = [
-    "./images/foods/food-1.jpg",
-    "./images/foods/food-2.jpg",
-    "./images/foods/food-3.jpg",
-    "./images/foods/food-4.jpg",
-    "./images/foods/food-5.jpg",
-    "./images/foods/food-6.jpg",
+    "/src/images/foods/food-1.jpg",
+    "/src/images/foods/food-2.jpg",
+    "/src/images/foods/food-3.jpg",
+    "/src/images/foods/food-4.jpg",
+    "/src/images/foods/food-5.jpg",
+    "/src/images/foods/food-6.jpg",
   ];
 
   const foodImages2 = [
-    "./images/foods/food-7.jpg",
-    "./images/foods/food-8.jpg",
-    "./images/foods/food-9.jpg",
-    "./images/foods/food-10.jpg",
-    "./images/foods/food-11.jpg",
-    "./images/foods/food-12.jpg",
+    "/src/images/foods/food-7.jpg",
+    "/src/images/foods/food-8.jpg",
+    "/src/images/foods/food-9.jpg",
+    "/src/images/foods/food-10.jpg",
+    "/src/images/foods/food-11.jpg",
+    "/src/images/foods/food-12.jpg",
   ];
 
   return (
@@ -156,7 +156,7 @@ const LandingPage = () => {
         </div>
 
         <div className="info-box__image--wrapper">
-          <img src="./images/food-plate.png" alt="A plate of food" />
+          <img src="/src/images/food-plate.png" alt="A plate of food" />
         </div>
 
         <div className="info-box__text">
@@ -290,7 +290,7 @@ const LandingPage = () => {
 
         <img
           className="instructions__image"
-          src="./images/instruction-image.jpg"
+          src="/src/images/instruction-image.jpg"
           alt="A plate of waffles"
         />
       </section>

@@ -100,7 +100,7 @@ const Navbar = () => {
                 <div className="menu__dropdown__image--wrapper">
                   <div className="menu__dropdown__image--container">
                     <img
-                      src="./images/dropdown-fruit.png"
+                      src="/src/images/dropdown-fruit.png"
                       className="dropdown__image"
                       alt=""
                     />
@@ -110,7 +110,7 @@ const Navbar = () => {
                 <div className="menu__dropdown__image--wrapper">
                   <div className="menu__dropdown__image--container">
                     <img
-                      src="./images/dropdown-steak.png"
+                      src="/src/images/dropdown-steak.png"
                       className="dropdown__image"
                       alt=""
                     />
@@ -120,7 +120,7 @@ const Navbar = () => {
                 <div className="menu__dropdown__image--wrapper">
                   <div className="menu__dropdown__image--container">
                     <img
-                      src="./images/dropdown-pasta.png"
+                      src="/src/images/dropdown-pasta.png"
                       className="dropdown__image"
                       alt=""
                     />
@@ -130,7 +130,7 @@ const Navbar = () => {
                 <div className="menu__dropdown__image--wrapper">
                   <div className="menu__dropdown__image--container">
                     <img
-                      src="./images/dropdown-nuts.png"
+                      src="/src/images/dropdown-nuts.png"
                       className="dropdown__image"
                       alt=""
                     />
@@ -165,7 +165,7 @@ const Navbar = () => {
           <div className="dropdown__image--wrapper">
             <div className="dropdown__image--container">
               <img
-                src="./images/dropdown-fruit.png"
+                src="/src/images/dropdown-fruit.png"
                 className="dropdown__image"
                 alt=""
               />
@@ -174,7 +174,7 @@ const Navbar = () => {
           <div className="dropdown__image--wrapper">
             <div className="dropdown__image--container">
               <img
-                src="./images/dropdown-steak.png"
+                src="/src/images/dropdown-steak.png"
                 className="dropdown__image"
                 alt=""
               />
@@ -183,7 +183,7 @@ const Navbar = () => {
           <div className="dropdown__image--wrapper">
             <div className="dropdown__image--container">
               <img
-                src="./images/dropdown-pasta.png"
+                src="/src/images/dropdown-pasta.png"
                 className="dropdown__image"
                 alt=""
               />
@@ -192,7 +192,7 @@ const Navbar = () => {
           <div className="dropdown__image--wrapper">
             <div className="dropdown__image--container">
               <img
-                src="./images/dropdown-nuts.png"
+                src="/src/images/dropdown-nuts.png"
                 className="dropdown__image"
                 alt=""
               />

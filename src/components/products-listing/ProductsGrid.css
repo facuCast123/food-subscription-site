@@ -19,7 +19,7 @@
 
   img {
     width: 100%;
-    min-height: 296px;
+    height: 296px;
 
     object-fit: cover;
   }
