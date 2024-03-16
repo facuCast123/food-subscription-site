@@ -13,6 +13,21 @@
   --_tangerine-600: #b69c7e;
   --_tangerine-700: #aca399;
   --_tangerine-800: #594338;
+
+  /* SALMON */
+  --_salmon-branding: #f97469;
+  --_salmon-contrast: #a54f48;
+  --_salmon-secondary: #ff3f26;
+  --_salmon-terciary: #ffcb72;
+
+  --_salmon-100: #fffbfb;
+  --_salmon-200: #fff1f0;
+  --_salmon-300: #ffe2e0;
+  --_salmon-400: #ffdbd8;
+  --_salmon-500: #e8a5a0;
+  --_salmon-600: #d8857e;
+  --_salmon-700: #947f7e;
+  --_salmon-800: #3c0d09;
 }
 
 * {
@@ -96,13 +111,11 @@ main {
 
 .vegetable--divider {
   width: 100%;
-  height: 300px;
+  height: 450px;
 
-  background: no-repeat url("/src/images/vegetable-banner.jpeg");
+  background: no-repeat url("/src/images/vegetable-divider.png");
   background-size: cover;
-  background-position: 50% 0;
-
-  transform: scaleY(-1);
+  background-position: 50% 100%;
 }
 
 /* LANDING - Info box */
@@ -400,7 +413,7 @@ main {
 /* LANDING - Features */
 
 .features {
-  padding: 2rem 0 5rem;
+  padding: 2rem 0;
 
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
@@ -423,12 +436,14 @@ main {
   max-width: 100%;
 
   overflow-x: auto;
+  scrollbar-width: none;
 }
 
 /* LANDING - instructions */
 
 .instructions {
   display: flex;
+  justify-content: space-around;
   gap: 1rem;
 
   margin-top: 50px;
