@@ -18,7 +18,6 @@ const LandingPage = () => {
   const [translate, setTranslate] = useState(0);
 
   // Meal component mapping
-
   const mealMap = MealData.meals.map((meal) => {
     return (
       <div
@@ -65,10 +64,11 @@ const LandingPage = () => {
     } else {
       setMealSlider((prev) => prev + 300);
     }
+    console.log(mealSlider);
   };
 
   const mealSlideRight = () => {
-    if (mealSlider === mealMap.length * -200) {
+    if (mealSlider <= mealMap.length * -200) {
       setMealSlider((prev) => prev);
     } else {
       setMealSlider((prev) => prev - 300);

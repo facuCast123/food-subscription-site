@@ -50,8 +50,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  font-weight: 500;
-  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+
+  h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
 }
 
 .nav__icon {

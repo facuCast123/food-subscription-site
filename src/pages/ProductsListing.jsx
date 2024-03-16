@@ -30,7 +30,13 @@ const ProductsListing = () => {
         >
           Salad
         </NavLink>
-        <NavLink>Smoothie</NavLink>
+
+        <NavLink
+          to="smoothies"
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          Smoothie
+        </NavLink>
       </nav>
       <Outlet />
     </div>

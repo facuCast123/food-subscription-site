@@ -203,4 +203,42 @@ export default {
             vegetables: 2,
         }
     ],
+    smoothies: [
+        {
+            id: 1,
+            url: "/src/images/foods/smoothie-1.jpg",
+            title: "Kiwi and Green Apple smoothie",
+            description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
+            calories: 309,
+            protein: 4.1,
+            vegetables: 3,
+        },
+        {
+            id: 2,
+            url: "/src/images/foods/smoothie-2.jpg",
+            title: "Kiwi and Green Apple smoothie",
+            description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
+            calories: 309,
+            protein: 4.1,
+            vegetables: 3,
+        },
+        {
+            id: 3,
+            url: "/src/images/foods/smoothie-3.jpg",
+            title: "Kiwi and Green Apple smoothie",
+            description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
+            calories: 309,
+            protein: 4.1,
+            vegetables: 3,
+        },
+        {
+            id: 4,
+            url: "/src/images/foods/smoothie-4.jpg",
+            title: "Kiwi and Green Apple smoothie",
+            description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
+            calories: 309,
+            protein: 4.1,
+            vegetables: 3,
+        }
+    ],
 }

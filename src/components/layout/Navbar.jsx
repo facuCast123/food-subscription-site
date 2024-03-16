@@ -34,6 +34,7 @@ const Navbar = () => {
   const location = useLocation();
   let navbarStyle;
   let navbarTitle;
+  let navbarButton;
 
   switch (location.pathname) {
     case "/meal-plan":
@@ -42,7 +43,10 @@ const Navbar = () => {
     case "/products":
     case "/products/soups":
     case "/products/salads":
+    case "/products/smoothies":
       navbarStyle = { color: "black" };
+      navbarTitle = { display: "block" };
+      navbarButton = { border: "1px solid black", color: "black" };
       break;
     default:
       navbarStyle = {};
@@ -76,12 +80,15 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <h2 className="nav__title">Tasteful</h2>
+        <Link to={"/"} className="nav__title" style={navbarTitle}>
+          <h2>Tasteful</h2>
+        </Link>
 
         <button
           className={`nav__button ${navActive ? "active" : null} ${
             menuActive ? "menuActive" : null
           }`}
+          style={navbarButton}
         >
           <FaRegUser /> <span>Log In</span>
         </button>
