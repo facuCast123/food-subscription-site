@@ -4,6 +4,8 @@ import {
   FaTiktok,
   FaPinterestP,
 } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -11,38 +13,46 @@ const Footer = () => {
       <div className="footer__links">
         <div className="footer__link__container">
           <span>Product</span>
-          <p>Main dish</p>
-          <p>Soup</p>
-          <p>Salad</p>
-          <p>Smoothie</p>
+          <Link to={"/products"}>Main dish</Link>
+          <Link to={"/products/soups"}>Soup</Link>
+          <Link to={"/products/salads"}>Salad</Link>
+          <Link to={"/products/smoothies"}>Smoothie</Link>
         </div>
 
         <div className="footer__link__container">
           <span>About</span>
-          <p>Our story</p>
-          <p>Green promise</p>
-          <p>News</p>
+          <a>Our story</a>
+          <a>Green promise</a>
+          <a>News</a>
         </div>
 
         <div className="footer__link__container">
           <span>Store</span>
-          <p>Subscription</p>
-          <p>Gift</p>
+          <Link to={"/meal-plan"}>Subscription</Link>
+          <a>Gift</a>
         </div>
 
         <div className="footer__link__container">
           <span>Help</span>
-          <p>Faq</p>
-          <p>Contact</p>
+          <a>Faq</a>
+          <a>Contact</a>
         </div>
 
         <div className="footer__link__container">
           <span>Follow us</span>
           <div className="footer__socials">
-            <FaInstagram />
-            <FaXTwitter />
-            <FaTiktok />
-            <FaPinterestP />
+            <a href="https://www.instagram.com/" target="_blank">
+              <FaInstagram />
+            </a>
+            <a href="https://twitter.com/home" target="_blank">
+              <FaXTwitter />
+            </a>
+            <a href="https://www.tiktok.com/en/" target="_blank">
+              <FaTiktok />
+            </a>
+            <a href="https://ar.pinterest.com/" target="_blank">
+              <FaPinterestP />
+            </a>
           </div>
         </div>
       </div>
