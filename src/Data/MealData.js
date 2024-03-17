@@ -66,7 +66,7 @@ export default {
     ],
     soups: [
         {
-            id: 1,
+            id: 8,
             url: "/src/images/foods/soup-1.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
@@ -75,7 +75,7 @@ export default {
             vegetables: 3,
         },
         {
-            id: 2,
+            id: 9,
             url: "/src/images/foods/soup-2.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
@@ -84,7 +84,7 @@ export default {
             vegetables: 3,
         },
         {
-            id: 3,
+            id: 10,
             url: "/src/images/foods/soup-3.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
@@ -93,7 +93,7 @@ export default {
             vegetables: 3,
         },
         {
-            id: 4,
+            id: 11,
             url: "/src/images/foods/soup-4.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
@@ -102,7 +102,7 @@ export default {
             vegetables: 3,
         },
         {
-            id: 5,
+            id: 12,
             url: "/src/images/foods/soup-5.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
@@ -111,7 +111,7 @@ export default {
             vegetables: 3,
         },
         {
-            id: 6,
+            id: 13,
             url: "/src/images/foods/soup-6.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
@@ -120,7 +120,7 @@ export default {
             vegetables: 3,
         },
         {
-            id: 7,
+            id: 14,
             url: "/src/images/foods/soup-7.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
@@ -129,7 +129,7 @@ export default {
             vegetables: 3,
         },
         {
-            id: 8,
+            id: 15,
             url: "/src/images/foods/soup-8.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
@@ -140,7 +140,7 @@ export default {
     ],
     salads: [
         {
-            id: 1,
+            id: 16,
             url: "/src/images/foods/salad-1.jpg",
             title: "Spicy chicken tomato salad",
             description: "Delicious minced chicken marinated in spicy sauce and served with tomato salad.",
@@ -149,7 +149,7 @@ export default {
             vegetables: 4,
         },
         {
-            id: 2,
+            id: 17,
             url: "/src/images/foods/salad-2.jpg",
             title: "Mozarella sticks with toast and salad",
             description: "Fresh mozzarella sticks served with toast and fresh salad.",
@@ -158,7 +158,7 @@ export default {
             vegetables: 2,
         },
         {
-            id: 3,
+            id: 18,
             url: "/src/images/foods/salad-3.jpg",
             title: "Meat and shrimp noodle stir fry",
             description: "Savoury stir fry with bucattini pasta, fresh shrimp and meat cutlets.",
@@ -167,7 +167,7 @@ export default {
             vegetables: 2,
         },
         {
-            id: 4,
+            id: 19,
             url: "/src/images/foods/salad-4.jpg",
             title: "Spicy chicken tomato salad",
             description: "Delicious minced chicken marinated in spicy sauce and served with tomato salad.",
@@ -176,7 +176,7 @@ export default {
             vegetables: 4,
         },
         {
-            id: 5,
+            id: 20,
             url: "/src/images/foods/salad-5.jpg",
             title: "Mozarella sticks with toast and salad",
             description: "Fresh mozzarella sticks served with toast and fresh salad.",
@@ -185,7 +185,7 @@ export default {
             vegetables: 2,
         },
         {
-            id: 6,
+            id: 21,
             url: "/src/images/foods/salad-6.jpg",
             title: "Meat and shrimp noodle stir fry",
             description: "Savoury stir fry with bucattini pasta, fresh shrimp and meat cutlets.",
@@ -194,7 +194,7 @@ export default {
             vegetables: 2,
         },
         {
-            id: 7,
+            id: 22,
             url: "/src/images/foods/salad-7.jpg",
             title: "Meat and shrimp noodle stir fry",
             description: "Savoury stir fry with bucattini pasta, fresh shrimp and meat cutlets.",
@@ -205,7 +205,7 @@ export default {
     ],
     smoothies: [
         {
-            id: 1,
+            id: 23,
             url: "/src/images/foods/smoothie-1.jpg",
             title: "Kiwi and Green Apple smoothie",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
@@ -214,7 +214,7 @@ export default {
             vegetables: 3,
         },
         {
-            id: 2,
+            id: 24,
             url: "/src/images/foods/smoothie-2.jpg",
             title: "Kiwi and Green Apple smoothie",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
@@ -223,7 +223,7 @@ export default {
             vegetables: 3,
         },
         {
-            id: 3,
+            id: 25,
             url: "/src/images/foods/smoothie-3.jpg",
             title: "Kiwi and Green Apple smoothie",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
@@ -232,7 +232,7 @@ export default {
             vegetables: 3,
         },
         {
-            id: 4,
+            id: 26,
             url: "/src/images/foods/smoothie-4.jpg",
             title: "Kiwi and Green Apple smoothie",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",

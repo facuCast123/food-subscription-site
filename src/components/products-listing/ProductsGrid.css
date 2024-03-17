@@ -7,6 +7,10 @@
   padding: 8rem 4rem;
 }
 
+.products-grid__link {
+  text-decoration: none;
+}
+
 .products-grid__product {
   display: grid;
   grid-template-columns: 1fr;

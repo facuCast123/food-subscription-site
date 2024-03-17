@@ -11,6 +11,7 @@ import ProductsListing from "./pages/ProductsListing";
 import ProductsGrid from "./components/products-listing/ProductsGrid";
 
 import "./index.css";
+import ProductDetails from "./pages/ProductDetails";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -19,13 +20,17 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<LandingPage />} />
+
           <Route path="meal-plan" element={<MealPlan />} />
+
           <Route path="products" element={<ProductsListing />}>
             <Route index element={<ProductsGrid />} />
             <Route path="soups" element={<ProductsGrid />} />
             <Route path="salads" element={<ProductsGrid />} />
             <Route path="smoothies" element={<ProductsGrid />} />
           </Route>
+
+          <Route path="details/:type/:id" element={<ProductDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>

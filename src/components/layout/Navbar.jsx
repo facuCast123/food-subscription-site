@@ -44,6 +44,9 @@ const Navbar = () => {
     case "/products/soups":
     case "/products/salads":
     case "/products/smoothies":
+    case `/details/${location.pathname.split("/")[2]}/${
+      location.pathname.split("/")[3]
+    }`:
       navbarStyle = { color: "black" };
       navbarTitle = { display: "block" };
       navbarButton = { border: "1px solid black", color: "black" };
