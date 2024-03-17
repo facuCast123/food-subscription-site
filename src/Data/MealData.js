@@ -2,7 +2,7 @@ export default {
     meals: [
         {
             id: 1,
-            url: "/src/images/main-dish-1.jpg",
+            url: "/images/main-dish-1.jpg",
             title: "Spicy chicken tomato salad",
             description: "Delicious minced chicken marinated in spicy sauce and served with tomato salad.",
             calories: 205,
@@ -11,7 +11,7 @@ export default {
         },
         {
             id: 2,
-            url: "/src/images/foods/food-4.jpg",
+            url: "/images/foods/food-4.jpg",
             title: "Mozarella sticks with toast and salad",
             description: "Fresh mozzarella sticks served with toast and fresh salad.",
             calories: 405,
@@ -20,7 +20,7 @@ export default {
         },
         {
             id: 3,
-            url: "/src/images/foods/food-8.jpg",
+            url: "/images/foods/food-8.jpg",
             title: "Meat and shrimp noodle stir fry",
             description: "Savoury stir fry with bucattini pasta, fresh shrimp and meat cutlets.",
             calories: 337,
@@ -29,7 +29,7 @@ export default {
         },
         {
             id: 4,
-            url: "/src/images/foods/food-6.jpg",
+            url: "/images/foods/food-6.jpg",
             title: "Spicy chicken tomato salad",
             description: "Delicious minced chicken marinated in spicy sauce and served with tomato salad.",
             calories: 205,
@@ -38,7 +38,7 @@ export default {
         },
         {
             id: 5,
-            url: "/src/images/foods/food-7.jpg",
+            url: "/images/foods/food-7.jpg",
             title: "Mozarella sticks with toast and salad",
             description: "Fresh mozzarella sticks served with toast and fresh salad.",
             calories: 405,
@@ -47,7 +47,7 @@ export default {
         },
         {
             id: 6,
-            url: "/src/images/foods/food-9.jpg",
+            url: "/images/foods/food-9.jpg",
             title: "Meat and shrimp noodle stir fry",
             description: "Savoury stir fry with bucattini pasta, fresh shrimp and meat cutlets.",
             calories: 337,
@@ -56,7 +56,7 @@ export default {
         },
         {
             id: 7,
-            url: "/src/images/foods/food-12.jpg",
+            url: "/images/foods/food-12.jpg",
             title: "Meat and shrimp noodle stir fry",
             description: "Savoury stir fry with bucattini pasta, fresh shrimp and meat cutlets.",
             calories: 337,
@@ -67,7 +67,7 @@ export default {
     soups: [
         {
             id: 8,
-            url: "/src/images/foods/soup-1.jpg",
+            url: "/images/foods/soup-1.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
@@ -76,7 +76,7 @@ export default {
         },
         {
             id: 9,
-            url: "/src/images/foods/soup-2.jpg",
+            url: "/images/foods/soup-2.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
@@ -85,7 +85,7 @@ export default {
         },
         {
             id: 10,
-            url: "/src/images/foods/soup-3.jpg",
+            url: "/images/foods/soup-3.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
@@ -94,7 +94,7 @@ export default {
         },
         {
             id: 11,
-            url: "/src/images/foods/soup-4.jpg",
+            url: "/images/foods/soup-4.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
@@ -103,7 +103,7 @@ export default {
         },
         {
             id: 12,
-            url: "/src/images/foods/soup-5.jpg",
+            url: "/images/foods/soup-5.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
@@ -112,7 +112,7 @@ export default {
         },
         {
             id: 13,
-            url: "/src/images/foods/soup-6.jpg",
+            url: "/images/foods/soup-6.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
@@ -121,7 +121,7 @@ export default {
         },
         {
             id: 14,
-            url: "/src/images/foods/soup-7.jpg",
+            url: "/images/foods/soup-7.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
@@ -130,7 +130,7 @@ export default {
         },
         {
             id: 15,
-            url: "/src/images/foods/soup-8.jpg",
+            url: "/images/foods/soup-8.jpg",
             title: "Creamy roasted pumpkin soup",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
@@ -141,7 +141,7 @@ export default {
     salads: [
         {
             id: 16,
-            url: "/src/images/foods/salad-1.jpg",
+            url: "/images/foods/salad-1.jpg",
             title: "Spicy chicken tomato salad",
             description: "Delicious minced chicken marinated in spicy sauce and served with tomato salad.",
             calories: 205,
@@ -150,7 +150,7 @@ export default {
         },
         {
             id: 17,
-            url: "/src/images/foods/salad-2.jpg",
+            url: "/images/foods/salad-2.jpg",
             title: "Mozarella sticks with toast and salad",
             description: "Fresh mozzarella sticks served with toast and fresh salad.",
             calories: 405,
@@ -159,7 +159,7 @@ export default {
         },
         {
             id: 18,
-            url: "/src/images/foods/salad-3.jpg",
+            url: "/images/foods/salad-3.jpg",
             title: "Meat and shrimp noodle stir fry",
             description: "Savoury stir fry with bucattini pasta, fresh shrimp and meat cutlets.",
             calories: 337,
@@ -168,7 +168,7 @@ export default {
         },
         {
             id: 19,
-            url: "/src/images/foods/salad-4.jpg",
+            url: "/images/foods/salad-4.jpg",
             title: "Spicy chicken tomato salad",
             description: "Delicious minced chicken marinated in spicy sauce and served with tomato salad.",
             calories: 205,
@@ -177,7 +177,7 @@ export default {
         },
         {
             id: 20,
-            url: "/src/images/foods/salad-5.jpg",
+            url: "/images/foods/salad-5.jpg",
             title: "Mozarella sticks with toast and salad",
             description: "Fresh mozzarella sticks served with toast and fresh salad.",
             calories: 405,
@@ -186,7 +186,7 @@ export default {
         },
         {
             id: 21,
-            url: "/src/images/foods/salad-6.jpg",
+            url: "/images/foods/salad-6.jpg",
             title: "Meat and shrimp noodle stir fry",
             description: "Savoury stir fry with bucattini pasta, fresh shrimp and meat cutlets.",
             calories: 337,
@@ -195,7 +195,7 @@ export default {
         },
         {
             id: 22,
-            url: "/src/images/foods/salad-7.jpg",
+            url: "/images/foods/salad-7.jpg",
             title: "Meat and shrimp noodle stir fry",
             description: "Savoury stir fry with bucattini pasta, fresh shrimp and meat cutlets.",
             calories: 337,
@@ -206,7 +206,7 @@ export default {
     smoothies: [
         {
             id: 23,
-            url: "/src/images/foods/smoothie-1.jpg",
+            url: "/images/foods/smoothie-1.jpg",
             title: "Kiwi and Green Apple smoothie",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
@@ -215,7 +215,7 @@ export default {
         },
         {
             id: 24,
-            url: "/src/images/foods/smoothie-2.jpg",
+            url: "/images/foods/smoothie-2.jpg",
             title: "Kiwi and Green Apple smoothie",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
@@ -224,7 +224,7 @@ export default {
         },
         {
             id: 25,
-            url: "/src/images/foods/smoothie-3.jpg",
+            url: "/images/foods/smoothie-3.jpg",
             title: "Kiwi and Green Apple smoothie",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
@@ -233,7 +233,7 @@ export default {
         },
         {
             id: 26,
-            url: "/src/images/foods/smoothie-4.jpg",
+            url: "/images/foods/smoothie-4.jpg",
             title: "Kiwi and Green Apple smoothie",
             description: "Dairy free pumpkin soup made with roasted nuts and cocounut milk.",
             calories: 309,
