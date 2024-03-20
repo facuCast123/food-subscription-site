@@ -852,7 +852,7 @@ main {
   align-items: center;
   gap: 2rem;
 
-  padding: 75px 0 5rem;
+  padding-top: 75px;
 
   h1 {
     padding-top: 2.5rem;
@@ -873,6 +873,8 @@ main {
   gap: 1.5rem;
 
   width: 900px;
+
+  margin-bottom: 3.5rem;
 }
 
 .product-details__image {
@@ -892,4 +894,53 @@ main {
   span {
     color: var(--_tangerine-800);
   }
+}
+
+.recommended {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 3rem 1rem;
+
+  background-color: var(--_tangerine-300);
+}
+
+.recommended__title {
+  margin-bottom: 1rem;
+
+  color: var(--_tangerine-800);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.recommended__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.recommended__card {
+  border: 1px solid var(--_tangerine-800);
+  cursor: pointer;
+}
+
+.recommended__card__image {
+  width: 400px;
+
+  object-fit: cover;
+  object-position: center;
+
+  aspect-ratio: 4/2;
+}
+
+.recommended__card__title {
+  padding: 1.5rem 2rem;
+
+  color: var(--_tangerine-800);
+  font-weight: 600;
+
+  background-color: white;
 }

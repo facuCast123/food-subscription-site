@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import MealData from "../Data/MealData";
 
 const ProductDetails = () => {
@@ -39,6 +39,7 @@ const ProductDetails = () => {
   return (
     <div className="product-details">
       <h1>{meal.title}</h1>
+
       <div className="product-details__content">
         <img
           className="product-details__image"
@@ -71,6 +72,29 @@ const ProductDetails = () => {
           dietary fiber 3.3g), salt equivalent 1.7g, vitamin E 2.6mg, vitamin K
           117μg, vitamin C 70mg
         </p>
+      </div>
+
+      <div className="recommended">
+        <h2 className="recommended__title">Recommended</h2>
+        <div className="recommended__grid">
+          {MealData.smoothies.map((smoothie) => (
+            <Link
+              className="products-grid__link"
+              to={`/details/smoothies/${smoothie.id}`}
+              // Known bug: when linking to smoothie, image doesn't change unless page is refreshed.
+              // Don't know how to fix yet ¯\_(ツ)_/¯
+            >
+              <div className="recommended__card" key={smoothie.id}>
+                <img
+                  className="recommended__card__image"
+                  src={smoothie.url}
+                  alt={smoothie.title}
+                />
+                <h3 className="recommended__card__title">{smoothie.title}</h3>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import {
@@ -19,6 +19,14 @@ const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
 
+  const location = useLocation();
+
+  // Close navbar on route change
+  useEffect(() => {
+    setNavActive(false);
+  }, [location.pathname]);
+
+  // Navabr/Menu dropdown functions
   const handleNav = () => {
     menuActive === false ? setNavActive(!navActive) : setMenuActive(false),
       setNavActive(!navActive);
@@ -30,8 +38,6 @@ const Navbar = () => {
   };
 
   // Change styling on different routes
-
-  const location = useLocation();
   let navbarStyle;
   let navbarTitle;
   let navbarButton;
